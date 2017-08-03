@@ -1,7 +1,14 @@
 " ~/.config/nvim/init.vim
 
-let g:python_host_prog = '/Users/jimstewart/.virtualenvs/neovim2/bin/python'
-let g:python3_host_prog = '/Users/jimstewart/.virtualenvs/neovim3/bin/python'
+if has('unix')
+  if has('mac')
+    let g:python_host_prog = '/Users/jimstewart/.virtualenvs/neovim2/bin/python'
+    let g:python3_host_prog = '/Users/jimstewart/.virtualenvs/neovim3/bin/python'
+  else
+    let g:python_host_prog = '/home/jim/.virtualenvs/neovim2/bin/python'
+    let g:python3_host_prog = '/home/jim/.virtualenvs/neovim3/bin/python'
+  endif
+endif
 
 call plug#begin('~/.config/nvim/plugged')
 
