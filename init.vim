@@ -30,7 +30,7 @@ Plug 'mileszs/ack.vim'
 Plug 'kien/ctrlp.vim'
 Plug 'scrooloose/syntastic'
 
-" FIXME: why isn't tabber autoloading?
+" FIXME: make tabber autoload without tabline being on
 Plug 'fweep/vim-tabber'
 
 let g:buffergator_suppress_keymaps = 1
@@ -139,7 +139,7 @@ set noerrorbells
 set visualbell t_vb=
 
 " Reduce the number of hit-enter prompts from status messages.
-set shortmess=aTI
+set shortmess=aTIF
 
 " Flash to matching paren/bracket/brace when matching pair is typed.
 set showmatch
