@@ -27,10 +27,7 @@ Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-fugitive'
 
 Plug 'mileszs/ack.vim'
-
 Plug 'kien/ctrlp.vim'
-let g:ctrlp_map = '<Leader>p'
-
 Plug 'scrooloose/syntastic'
 
 " FIXME: make tabber autoload without tabline being on
