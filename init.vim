@@ -20,6 +20,11 @@ Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-vinegar'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-scriptease'
+
+Plug 'AndrewRadev/splitjoin.vim'
+Plug 'AndrewRadev/switch.vim'
 
 Plug 'mileszs/ack.vim'
 Plug 'kien/ctrlp.vim'
@@ -40,9 +45,20 @@ let g:airline_skip_empty_sections = 1
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 let g:deoplete#enable_at_startup = 1
 
+" tmux plugins.
+Plug 'benmills/vimux'
+let g:VimuxUseNearestPane = 1
+
 " Ruby/Rails plugins
 Plug 'tpope/vim-rails'
 Plug 'tpope/vim-bundler'
+Plug 'kana/vim-textobj-user'
+Plug 'nelstrom/vim-textobj-rubyblock'
+
+Plug 'janko-m/vim-test'
+let test#strategy = 'vimux'
+nnoremap <Leader>t :TestNearest<CR>
+nnoremap <Leader>l :TestLast<CR>
 
 call plug#end()
 
@@ -280,5 +296,8 @@ function! DeleteHiddenBuffers()
         silent execute 'bwipeout' buf
     endfor
 endfunction
+
+" Copy current file relative path to unnamed clipboard.
+nnoremap <silent> <Leader>y :let @* = expand('%')<CR>
 
 runtime macros/matchit.vim
