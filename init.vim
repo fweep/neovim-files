@@ -32,6 +32,7 @@ Plug 'scrooloose/syntastic'
 
 " FIXME: make tabber autoload without tabline being on
 Plug 'fweep/vim-tabber'
+Plug 'fweep/vim-cscope'
 
 let g:buffergator_suppress_keymaps = 1
 Plug 'jeetsukumaran/vim-buffergator'
