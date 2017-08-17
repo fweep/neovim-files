@@ -73,6 +73,32 @@ source $HOME/.config/nvim/vim-shared/mappings.vim
 " Save more history for marks, commands, searches, etc. between invocations.
 set shada='100,/1000,:1000,<50,s100,h,c
 
+" Tabber autolabel {{{1
+
+function! UpdateTabberLabel(label)
+  let tab_number = tabpagenr()
+  let tabber_properties = gettabvar(tab_number, 'tabber_properties')
+  let tabber_properties.label = a:label
+  call settabvar(tab_number, 'tabber_properties', tabber_properties)
+  redraw!
+endfunction
+
+function! SetTabberLabelToRubyClassName()
+  let line = getline(1)
+  let class_name_match = matchlist(line, '^\s*class\s\+\(\w\+\)')
+  if len(class_name_match) > 1
+    let class_name = class_name_match[1]
+    call UpdateTabberLabel(class_name)
+  endif
+endfunction
+
+augroup tabber_autolabel
+  autocmd!
+  autocmd BufRead,BufWrite *.rb call SetTabberLabelToRubyClassName()
+augroup END
+
+" }}}
+
 " Local overrides.
 
 if filereadable(expand('~/.local/share/nvim/init.vim')) | source ~/.local/share/nvim/init.vim | endif
