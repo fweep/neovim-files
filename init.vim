@@ -29,6 +29,7 @@ Plug 'AndrewRadev/switch.vim'
 Plug 'mileszs/ack.vim'
 Plug 'kien/ctrlp.vim'
 Plug 'scrooloose/syntastic'
+Plug 'godlygeek/tabular'
 
 " My plugins (if you're not me, get rid of these g:plug_url_format lines to use https GitHub URLs).
 let g:plug_url_format = 'git@github.com:%s.git'
