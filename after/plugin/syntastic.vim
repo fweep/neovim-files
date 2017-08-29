@@ -2,7 +2,8 @@
 let g:syntastic_always_populate_loc_list = 1
 
 " Automatically open/close location list window depending on presence of errors.
-let g:syntastic_auto_loc_list = 1
+" Disabled because it won't ever go away if there are errors.
+" let g:syntastic_auto_loc_list = 1
 
 " Python settings.
 let g:syntastic_python_checkers = ["pylint"]
