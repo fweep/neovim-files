@@ -41,9 +41,6 @@ Plug 'scrooloose/syntastic'
 " Format regions as tables.
 Plug 'godlygeek/tabular'
 
-" Makes */g* highlight without moving the cursor.
-Plug 'vim-scripts/SearchHighlighting'
-
 " My plugins (if you're not me, get rid of these g:plug_url_format lines to use https GitHub URLs).
 let g:plug_url_format = 'git@github.com:%s.git'
 
