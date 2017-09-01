@@ -5,83 +5,8 @@ if has('unix')
   let g:python3_host_prog = $HOME . '/.virtualenvs/neovim3/bin/python'
 endif
 
-call plug#begin('~/.config/nvim/plugged')
-
-" General-purpose plugins.
-
-" Colorscheme.
-Plug 'altercation/vim-colors-solarized'
-
-" See GitHub for details of tpope plugins.
-Plug 'tpope/vim-unimpaired'
-Plug 'tpope/vim-commentary'
-Plug 'tpope/vim-eunuch'
-Plug 'tpope/vim-unimpaired'
-Plug 'tpope/vim-abolish'
-Plug 'tpope/vim-endwise'
-Plug 'tpope/vim-vinegar'
-Plug 'tpope/vim-repeat'
-Plug 'tpope/vim-fugitive'
-Plug 'tpope/vim-surround'
-Plug 'tpope/vim-scriptease'
-
-" See GitHub for details of AndrewRadev plugins.
-Plug 'AndrewRadev/splitjoin.vim'
-Plug 'AndrewRadev/switch.vim'
-
-" Ack search results in quickfix window.
-Plug 'mileszs/ack.vim'
-
-" Fuzzy file finder.
-Plug 'kien/ctrlp.vim'
-
-" Mark syntax/linter errors and populate location list.
-Plug 'scrooloose/syntastic'
-
-" Format regions as tables.
-Plug 'godlygeek/tabular'
-
-" My plugins (if you're not me, get rid of these g:plug_url_format lines to use https GitHub URLs).
-let g:plug_url_format = 'git@github.com:%s.git'
-
-" Powerline-style tabs and other tab labeling functionality.
-Plug 'fweep/vim-tabber'
-
-" Bind cscope search commands and list results in quickfix window.
-Plug 'fweep/vim-cscope'
-unlet g:plug_url_format
-
-" Buffer list in a tray-style window.
-Plug 'jeetsukumaran/vim-buffergator'
-let g:buffergator_suppress_keymaps = 1
-
-" Lighter-weight Powerline-style statusline.
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
-let g:airline_theme = 'solarized'
-let g:airline_powerline_fonts = 1
-let g:airline_skip_empty_sections = 1
-
-" Autocompletion.
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-let g:deoplete#enable_at_startup = 1
-
-" Ruby/Rails plugins
-Plug 'tpope/vim-rails'
-Plug 'tpope/vim-bundler'
-Plug 'kana/vim-textobj-user'
-Plug 'nelstrom/vim-textobj-rubyblock'
-
-" Python plugins
-Plug 'python-mode/python-mode'
-let g:pymode_python = 'python3'
-let g:pymode_options_colorcolumn = 0
-" Prefer Syntastic for linting.
-let g:pymode_lint = 0
-" Disable Rope for now.
-let g:pymode_rope = 0
-
-call plug#end()
+" Shared plugins.
+source $HOME/.vim/vim-shared/plugins.vim
 
 runtime macros/matchit.vim
 
