@@ -6,7 +6,7 @@ if has('unix')
 endif
 
 " Shared plugins.
-source $HOME/.vim/vim-shared/plugins.vim
+source $HOME/.config/nvim/vim-shared/plugins.vim
 
 runtime macros/matchit.vim
 
