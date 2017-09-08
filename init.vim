@@ -6,18 +6,18 @@ if has('unix')
 endif
 
 " Shared plugins.
-source $HOME/.config/nvim/vim-shared/plugins.vim
+source $HOME/.config/nvim/plugged/vim-shared/plugins.vim
 
 runtime macros/matchit.vim
 
 " Shared options.
-source $HOME/.config/nvim/vim-shared/options.vim
+source $HOME/.config/nvim/plugged/vim-shared/options.vim
 
 " Shared theme/visualization config.
-source $HOME/.config/nvim/vim-shared/theme.vim
+source $HOME/.config/nvim/plugged/vim-shared/theme.vim
 
 " Shared key mappings/bindings.
-source $HOME/.config/nvim/vim-shared/mappings.vim
+source $HOME/.config/nvim/plugged/vim-shared/mappings.vim
 
 " Neovim-specific config.
 
