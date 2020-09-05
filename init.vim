@@ -1,7 +1,8 @@
 " ~/.config/nvim/init.vim
 
 if has('unix')
-  let g:python_host_prog = $HOME . '/.virtualenvs/neovim2/bin/python'
+  let g:loaded_python_provider = 0 " disable python2
+  " let g:python_host_prog = $HOME . '/.virtualenvs/neovim2/bin/python'
   let g:python3_host_prog = $HOME . '/.virtualenvs/neovim3/bin/python'
 endif
 

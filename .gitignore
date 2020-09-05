@@ -1,3 +1,5 @@
 .netrwhist
+.netrwbook
 plugged/*
 !plugged/.keep
+autoload/plug.vim.old
